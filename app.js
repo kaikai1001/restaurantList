@@ -1,9 +1,13 @@
 const express = require('express')
-const app = express()
-const port = 3000
 
 const exphdb = require('express-handlebars')
 const restaurantList = require('./restaurant.json')
+
+const app = express()
+const port = 3000
+
+
+
 
 app.engine('handlebars', exphdb({ defaultLayout: 'main' }))
 app.set('view engine', 'handlebars')
